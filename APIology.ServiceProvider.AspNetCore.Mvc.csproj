@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\APIology.Runner.AspNetCore\APIology.Runner.AspNetCore.csproj" />
+    <ProjectReference Include="..\APIology.ServiceProvider.AspNetCore\APIology.ServiceProvider.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>

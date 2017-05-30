@@ -1,14 +1,15 @@
-﻿namespace APIology.Runner.AspNetCore.Mvc
+﻿namespace APIology.ServiceProvider
 {
-	using System.Diagnostics.CodeAnalysis;
+	using Configuration;
 	using Microsoft.AspNetCore.Builder;
 	using Microsoft.AspNetCore.Hosting;
 	using Microsoft.Extensions.DependencyInjection;
+	using System.Diagnostics.CodeAnalysis;
 
 	[SuppressMessage("ReSharper", "MemberCanBeProtected.Global")]
-	public abstract class ServiceBase<TAPIBase, TConfiguration> : AspNetCore.ServiceBase<TAPIBase, TConfiguration>
-		where TAPIBase : ServiceBase<TAPIBase, TConfiguration>
-		where TConfiguration : Configuration, new()
+	public abstract class MvcServiceProvider<TAPIBase, TConfiguration> : AspNetCoreServiceProvider<TAPIBase, TConfiguration>
+		where TAPIBase : AspNetCoreServiceProvider<TAPIBase, TConfiguration>
+		where TConfiguration : AspNetCoreConfiguration, new()
 	{
 		public override void ConfigureAspNetCore(IServiceCollection services)
 		{
