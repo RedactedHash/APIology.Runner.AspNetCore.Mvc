@@ -18,17 +18,6 @@
 
 		public override void BuildAspNetCoreApp(IApplicationBuilder app, IHostingEnvironment env)
 		{
-			if (env.IsDevelopment())
-			{
-				app.UseDeveloperExceptionPage();
-				app.UseBrowserLink();
-			}
-			else
-			{
-				app.UseExceptionHandler("/Error");
-			}
-
-			app.UseStaticFiles();
 		}
 	}
 }
